@@ -119,7 +119,8 @@ def read_content(filename):
 def render(template, **params):
     """Replace placeholders in template with values from params."""
     return re.sub(r'{{\s*([^}\s]+)\s*}}',
-                  lambda match: str(params.get(match.group(1), match.group(0))),
+                  lambda match: str(params.get(
+                      match.group(1), match.group(0))),
                   template)
 
 
