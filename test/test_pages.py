@@ -124,4 +124,4 @@ class PagesTest(unittest.TestCase):
         posts = makesite.make_pages(src, post_dst, post_layout, author='Admin')
         makesite.make_list(posts, list_dst, list_layout, item_layout)
         with open(os.path.join(self.site_path, 'list.txt')) as f:
-            self.assertEqual(f.read(), '<div><p>{{ title }}:{{ author }}:Foo</p><p>bar:Admin:Bar</p></div>')
+            self.assertEqual(f.read(), '<div><p>bar:Admin:Bar</p><p>{{ title }}:{{ author }}:Foo</p></div>')
